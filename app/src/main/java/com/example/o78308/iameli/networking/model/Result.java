@@ -3,8 +3,6 @@ package com.example.o78308.iameli.networking.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.google.gson.annotations.Expose;
-
 public class Result implements Parcelable {
 
     private String id;
@@ -19,7 +17,6 @@ public class Result implements Parcelable {
 
     public Result() {
     }
-
 
     protected Result(Parcel in) {
         id = in.readString();
@@ -100,28 +97,8 @@ public class Result implements Parcelable {
         return price;
     }
 
-    public String getCurrency_id() {
-        return currency_id;
-    }
-
-    public Integer getAvailable_quantity() {
-        return available_quantity;
-    }
-
-    public Integer getSold_quantity() {
-        return sold_quantity;
-    }
-
     public String getThumbnail() {
         return thumbnail;
-    }
-
-    public Seller getSeller() {
-        return seller;
-    }
-
-    public String getCondition() {
-        return condition;
     }
 
     public static Creator<Result> getCREATOR() {

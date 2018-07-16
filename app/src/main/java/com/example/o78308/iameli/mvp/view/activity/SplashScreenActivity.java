@@ -29,10 +29,9 @@ public class SplashScreenActivity extends CommonActivity<ISplashScreenPresenter>
     }
 
     @Override
-    public void goActivity(){
+    public void goActivity() {
         Intent intent = new Intent(this, MainSearchActivity.class);
         startActivity(intent);
         SplashScreenActivity.this.finish();
     }
-
 }

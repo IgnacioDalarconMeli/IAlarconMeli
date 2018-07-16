@@ -46,19 +46,4 @@ public class ProductListCallback implements Parcelable {
         return results;
     }
 
-    public String getSite_id() {
-        return site_id;
-    }
-
-    public String getQuery() {
-        return query;
-    }
-
-    public Paging getPaging() {
-        return paging;
-    }
-
-    public static Creator<ProductListCallback> getCREATOR() {
-        return CREATOR;
-    }
 }

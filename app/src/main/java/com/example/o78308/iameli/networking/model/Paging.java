@@ -3,7 +3,7 @@ package com.example.o78308.iameli.networking.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Paging implements Parcelable{
+public class Paging implements Parcelable {
     private Integer total;
     private Integer offset;
     private Integer limit;
@@ -78,23 +78,8 @@ public class Paging implements Parcelable{
         }
     };
 
-    public Integer getTotal() {
-        return total;
-    }
-
     public Integer getOffset() {
         return offset;
     }
 
-    public Integer getLimit() {
-        return limit;
-    }
-
-    public Integer getPrimary_results() {
-        return primary_results;
-    }
-
-    public static Creator<Paging> getCREATOR() {
-        return CREATOR;
-    }
 }

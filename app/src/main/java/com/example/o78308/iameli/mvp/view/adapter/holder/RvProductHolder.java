@@ -4,10 +4,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.Glide;
 import com.example.o78308.iameli.R;
 import com.example.o78308.iameli.core.Util.BaseService;
-import com.example.o78308.iameli.core.Util.GlideApp;
 import com.example.o78308.iameli.networking.ProductCall;
 import com.example.o78308.iameli.networking.model.Picture;
 import com.example.o78308.iameli.networking.model.Result;
@@ -34,10 +33,9 @@ public class RvProductHolder extends CommonViewHolder<Result> {
     public void bind(final Result result) {
         productPrice.setText("$ " + result.getPrice().toString());
         producttitle.setText(result.getTitle() + " ");
-        GlideApp.with(itemView)
+        Glide.with(itemView)
                 .load(result.getThumbnail())
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .onlyRetrieveFromCache(true).into(thumbnail);
+                .into(thumbnail);
         callForBetterPictures(result.getThumbnail().toString());
 
     }
@@ -56,7 +54,7 @@ public class RvProductHolder extends CommonViewHolder<Result> {
                     for (Variations index : response.body().getVariationsArrayList()) {
                         if (index.getSize().equals("250x250")) {
                             try {
-                                GlideApp.with(itemView).load(index.getUrl()).diskCacheStrategy(DiskCacheStrategy.ALL).into(thumbnail);
+                                Glide.with(itemView).load(index.getUrl()).into(thumbnail);
                             } catch (IllegalArgumentException e) {
                                 e.printStackTrace();
                             }

@@ -107,10 +107,6 @@ public class Detail implements Parcelable {
         return price;
     }
 
-    public String getCurrency_id() {
-        return currency_id;
-    }
-
     public Integer getAvailable_quantity() {
         return available_quantity;
     }
@@ -122,11 +118,7 @@ public class Detail implements Parcelable {
     public Boolean getAccepts_mercadopago() {
         return accepts_mercadopago;
     }
-
-    public String getCondition() {
-        return condition;
-    }
-
+    
     public ArrayList<DetailPicture> getPictures() {
         return pictures;
     }

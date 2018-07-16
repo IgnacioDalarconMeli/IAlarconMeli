@@ -2,7 +2,6 @@ package com.example.o78308.iameli.mvp.view.activity;
 
 import android.app.SearchManager;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -15,7 +14,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.example.o78308.iameli.R;
 import com.example.o78308.iameli.core.CommonActivity;

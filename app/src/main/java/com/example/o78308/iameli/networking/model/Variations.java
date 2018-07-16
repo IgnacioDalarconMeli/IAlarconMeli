@@ -48,11 +48,4 @@ public class Variations implements Parcelable {
         return url;
     }
 
-    public String getSecure_url() {
-        return secure_url;
-    }
-
-    public static Creator<Variations> getCREATOR() {
-        return CREATOR;
-    }
 }

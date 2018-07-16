@@ -50,14 +50,6 @@ public class ExtendProducDetail implements Parcelable {
         return plain_text;
     }
 
-    public String getDate_created() {
-        return date_created;
-    }
-
-    public String getLast_updated() {
-        return last_updated;
-    }
-
     public static Creator<ExtendProducDetail> getCREATOR() {
         return CREATOR;
     }

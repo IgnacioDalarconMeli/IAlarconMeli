@@ -46,15 +46,8 @@ public class Picture implements Parcelable {
         return id;
     }
 
-    public String getMax_size() {
-        return max_size;
-    }
-
     public ArrayList<Variations> getVariationsArrayList() {
         return variationsArrayList;
     }
 
-    public static Creator<Picture> getCREATOR() {
-        return CREATOR;
-    }
 }

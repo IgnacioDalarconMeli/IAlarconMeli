@@ -6,13 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.o78308.iameli.core.mvp.IContract;
 import com.example.o78308.iameli.mvp.view.adapter.holder.CommonViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class CommonAdapter <T extends CommonViewHolder, J> extends RecyclerView.Adapter<T> implements ICommonAdapter<T, J> {
+public abstract class CommonAdapter<T extends CommonViewHolder, J> extends RecyclerView.Adapter<T> implements ICommonAdapter<T, J> {
 
     private View view;
     private List<J> _collection = new ArrayList<J>();

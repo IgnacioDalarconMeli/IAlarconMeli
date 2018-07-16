@@ -42,7 +42,7 @@ public class RvProductFragment extends CommonFragment<IRvProductPresenter> imple
 
     public static RvProductFragment newInstance(ArrayList<Result> resultArrayList) {
         Bundle args = new Bundle();
-        args.putParcelableArrayList("trendArrayList",resultArrayList);
+        args.putParcelableArrayList("trendArrayList", resultArrayList);
         RvProductFragment fragment = new RvProductFragment();
         fragment.setPresenter(new RvProductPresenter(fragment));
         fragment.setArguments(args);
@@ -82,7 +82,7 @@ public class RvProductFragment extends CommonFragment<IRvProductPresenter> imple
         @Override
         public void onClick(View view) {
             int position = mRecyler.getChildAdapterPosition(view);
-            Result  pruduct = mArrayListResult.get(position);
+            Result pruduct = mArrayListResult.get(position);
             detailOrderSelected.rowSelected(pruduct.getId());
         }
     }
