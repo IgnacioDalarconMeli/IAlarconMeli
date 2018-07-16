@@ -46,7 +46,7 @@ public class MainSearchPresenter implements IMainSearchPresenter {
         BaseService.getInstance().getService(ProductCall.class).getDetail(productId).enqueue(new Callback<Detail>() {
             @Override
             public void onResponse(Call<Detail> call, Response<Detail> response) {
-                if(response.isSuccessful())
+                if (response.isSuccessful())
                     iMainSearchView.doDetailTransaction(response.body());
 
                 iMainSearchView.progress(false);

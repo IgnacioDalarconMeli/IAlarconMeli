@@ -4,7 +4,6 @@ import com.example.o78308.iameli.core.Util.BaseService;
 import com.example.o78308.iameli.mvp.view.fragment.IProductDetail;
 import com.example.o78308.iameli.networking.ProductCall;
 import com.example.o78308.iameli.networking.model.ExtendProducDetail;
-import com.example.o78308.iameli.networking.model.ProductListCallback;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -27,7 +26,7 @@ public class ProductDetailPresenter implements IProductDetailPresenter {
                 if (response.isSuccessful())
                     iProductDetail.setExtendDetail(response.body());
 
-              iProductDetail.progress(false);
+                iProductDetail.progress(false);
             }
 
             @Override
