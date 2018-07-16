@@ -6,6 +6,8 @@ public interface IMainSearchPresenter extends IContract.Presenter {
 
     void getTrendProduct();
 
+    void getTrendProduct(String q);
+
     void getDetailProduct(String productId);
 
     void getSearchProduct(String product);

@@ -42,10 +42,15 @@ public class RvProductHolder extends CommonViewHolder<Result> {
 
     public void callForBetterPictures(String urlPath) {
 
-        String[] parts = urlPath.split("/");
-        String jpgPart = parts[parts.length - 1];
-        String[] rawId = jpgPart.split("-");
-        String pictureId = rawId[0] + "-" + rawId[1];
+        String pictureId = null;
+        try {
+            String[] parts = urlPath.split("/");
+            String jpgPart = parts[parts.length - 1];
+            String[] rawId = jpgPart.split("-");
+            pictureId = rawId[0] + "-" + rawId[1];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
 
         BaseService.getInstance().getService(ProductCall.class).getPicture(pictureId).enqueue(new Callback<Picture>() {
             @Override

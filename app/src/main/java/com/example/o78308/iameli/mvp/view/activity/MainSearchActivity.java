@@ -2,6 +2,7 @@ package com.example.o78308.iameli.mvp.view.activity;
 
 import android.app.SearchManager;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -35,23 +36,30 @@ public class MainSearchActivity extends CommonActivity<IMainSearchPresenter> imp
     public static final String TAG_DETAIL_PRODUCT = "detailProduct";
     ProgressBar progressBar;
     ArrayList<Result> mResultArrayList;
-    private boolean doubleTapToExit = false;
+    private String queryOnSavedInstance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_search);
         setPresenter(new MainSearchPresenter(this));
-        init();
+        if (savedInstanceState != null)
+            init(true, savedInstanceState.getString("query"));
+        else
+            init(false, "");
     }
 
-    private void init() {
+    private void init(boolean isSaveInstance, String q) {
         frameLayoutContainer = findViewById(R.id.fragment_container);
         progressBar = findViewById(R.id.progressBar);
         toolbar = findViewById(R.id.toolbar);
         appBarLayout = findViewById(R.id.appbar_layout);
         setSupportActionBar(toolbar);
-        presenter.getTrendProduct();
+        if (!isSaveInstance)
+            presenter.getTrendProduct();
+        else
+            queryOnSavedInstance = q;
+            presenter.getTrendProduct(q);
     }
 
     @Override
@@ -72,6 +80,7 @@ public class MainSearchActivity extends CommonActivity<IMainSearchPresenter> imp
             public boolean onQueryTextSubmit(String query) {
                 if (!query.equals(""))
                     presenter.getSearchProduct(query);
+                queryOnSavedInstance = query;
                 return false;
             }
 
@@ -125,4 +134,9 @@ public class MainSearchActivity extends CommonActivity<IMainSearchPresenter> imp
         super.onBackPressed();
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString("query", queryOnSavedInstance);
+        super.onSaveInstanceState(outState);
+    }
 }

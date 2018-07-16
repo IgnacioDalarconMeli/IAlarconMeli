@@ -118,7 +118,7 @@ public class Detail implements Parcelable {
     public Boolean getAccepts_mercadopago() {
         return accepts_mercadopago;
     }
-    
+
     public ArrayList<DetailPicture> getPictures() {
         return pictures;
     }

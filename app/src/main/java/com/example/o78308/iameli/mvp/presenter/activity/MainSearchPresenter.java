@@ -20,8 +20,15 @@ public class MainSearchPresenter implements IMainSearchPresenter {
         this.iMainSearchView = iMainSearchView;
     }
 
+
+
     @Override
     public void getTrendProduct() {
+        getTrendProduct(q);
+    }
+
+    @Override
+    public void getTrendProduct(String q) {
         iMainSearchView.progress(true);
         BaseService.getInstance().getService(ProductCall.class).getItems(q, ACCESS_TOKEN).enqueue(new Callback<ProductListCallback>() {
             @Override
