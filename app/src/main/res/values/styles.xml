@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="text_view_h1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/miriam_libre</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="text_view_h2">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:fontFamily">@font/miriam_libre</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="text_view_h3">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/miriam_libre</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/darkGrey</item>
+    </style>
+
+    <style name="expanded_title_colapsing_app_bar">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">21dp</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,15 @@
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/base_tool_bar_id"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/mercado_yellow"
+    app:title="@string/mercado_libre"
+    app:titleTextAppearance="@font/miriam_libre"
+    app:titleTextColor="@color/black"
+    android:minHeight="?attr/actionBarSize"
+    app:collapseIcon="@drawable/ic_arrow_back_black_24dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+</android.support.v7.widget.Toolbar>
